@@ -4,7 +4,7 @@ find_package(Git REQUIRED)
 ExternalProject_Add(
         treeline_src
         PREFIX "vendor/treeline"
-        GIT_REPOSITORY "https://github.com/zxjcarrot/treeline.git"
+        GIT_REPOSITORY "https://gitee.com/syaojun/treeline2.git"
         TIMEOUT 10
         BUILD_COMMAND ""
         UPDATE_COMMAND "" # to prevent rebuilding everytime

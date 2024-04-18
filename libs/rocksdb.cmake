@@ -10,7 +10,7 @@ ExternalProject_Add(
         rocksdb_src
         PREFIX "vendor/rocksdb"
         GIT_REPOSITORY "https://github.com/zxjcarrot/rocksdb-7.1.1.git"
-        GIT_TAG main
+        GIT_TAG master
         GIT_SHALLOW TRUE
         TIMEOUT 10
         CONFIGURE_COMMAND ""

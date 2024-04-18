@@ -4,7 +4,7 @@ target_link_libraries(frontend leanstore)
 
 
 add_executable(ycsb_zipf ycsb/ycsb_zipf.cpp)
-target_link_libraries(ycsb_zipf treeline leanstore Threads::Threads rocksdb tcmalloc)
+target_link_libraries(ycsb_zipf treeline leanstore Threads::Threads rocksdb /usr/lib/x86_64-linux-gnu/libtcmalloc.so.4)
 target_include_directories(ycsb_zipf PRIVATE ${SHARED_INCLUDE_DIRECTORY} ${CMAKE_DL_LIBS})
 
 #add_executable(ycsb_hotspot ycsb/ycsb_hotspot.cpp)
@@ -18,7 +18,7 @@ target_include_directories(ycsb_zipf PRIVATE ${SHARED_INCLUDE_DIRECTORY} ${CMAKE
 
 
 add_executable(tpcc tpc-c/tpcc.cpp)
-target_link_libraries(tpcc leanstore Threads::Threads tcmalloc)
+target_link_libraries(tpcc leanstore Threads::Threads /usr/lib/x86_64-linux-gnu/libtcmalloc.so.4)
 target_include_directories(tpcc PRIVATE ${SHARED_INCLUDE_DIRECTORY})
 
 # # https://source.wiredtiger.com/10.0.0/build-posix.html
